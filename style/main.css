@@ -1,0 +1,132 @@
+*{
+	padding: 0;
+	margin: 0;
+}
+
+#wrapper{
+	width:100%; 
+}
+
+header{
+	width:100%;
+	background-color:#101830; 
+	text-align:center;  
+}
+
+.icon-menu{ 
+	height:70px;  
+	font-size:30px; 
+	color:white;
+	display:none; 
+}
+
+header label{
+	position:relative;
+	top:20px;   
+	font-family:arial;
+	color:white;
+	display: none; 
+}
+
+header input{
+	display:none; 
+}
+
+header ul li{
+	display:inline-block; 
+}
+
+header a{ 
+	margin:0 10px; 
+	line-height:70px;
+	color:white;
+	text-decoration:none;
+	font-family:arial;
+	box-sizing: border-box;
+	padding:8px; 
+	font-weight:600; 
+	outline:3px solid white; 
+}
+
+header a:hover{
+	transition:.2s;
+	outline:3px solid #E83D27;
+	color:#E83D27;  
+}
+
+.logo{
+	padding-top:75px;
+	padding-bottom:75px;    
+	text-align:center; 
+	background-color:#2E4057; 
+}
+
+.logo p{
+	margin-left:50%; 
+	font-size:45px; 
+	font-weight:700; 
+	line-height:60px; 
+	width:400px;
+	transform:translateX(-50%);  
+	font-family:arial; 
+	color:white;
+	border:12px solid white;   
+}
+
+
+/*Seccion del media para responsive*/
+@media screen and (max-width:768px){
+
+	.icon-menu{
+		display:block;
+		cursor:pointer;  
+	}
+
+	header label{
+		display: block;
+	}
+
+	header label:hover{
+		color:#3A3838; 
+	}
+
+	header label:hover span{
+		color:#3A3838;
+	}
+
+	header a:hover{
+		color:white;
+		outline: 3px solid white;
+	}
+
+	header ul{
+		z-index:5;
+		transform:translateX(-100%); 
+		width:100%; 
+		position:absolute; 
+		top:85px;
+		left:0;
+		transition: all 0.5s;  
+	}
+
+	header ul li{
+		z-index:5;
+		width:100%;
+		background-color:#6B6969;  
+	}
+
+	header ul li:hover{
+		z-index:5;
+		background-color:#3A3838; 
+	}
+
+	#menu:checked ~ ul{
+		transform:translateX(0); 
+	}
+
+	.logo p{
+		font-size:25px; 
+		width:80%; 
+	}
+
+}
