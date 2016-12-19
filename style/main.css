@@ -1,10 +1,6 @@
-/**{
-	padding: 0;
-	margin: 0;
-}*/
 
 /*Inicio codigo de Starwars*/
-@import url(https://fonts.googleapis.com/css?family=News+Cycle:400,700);
+/*@import url(https://fonts.googleapis.com/css?family=News+Cycle:400,700);
 
 body {
   margin: 0;
@@ -98,14 +94,22 @@ body {
 }
 
 /*Fondo de estrellas*/
-canvas {
+/*canvas {
   position: absolute;
   top: 0;
   left: 0;
   z-index: -1;
-}
+}*/
+
 /*Fin codigo de starwars*/
-/*#wrapper{
+
+*{
+	padding: 0;
+	margin: 0;
+}
+
+
+#wrapper{
 	width:100%; 
 	overflow:hidden; 
 }
@@ -178,7 +182,7 @@ header a:hover{
 
 
 /*Seccion del media para responsive*/
-/*@media screen and (max-width:768px){
+@media screen and (max-width:768px){
 
 	.icon-menu{
 		display:block;
@@ -232,4 +236,4 @@ header a:hover{
 		width:80%; 
 	}
 
-}*/
+}
