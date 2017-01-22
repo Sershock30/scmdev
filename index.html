@@ -5,102 +5,52 @@
 	<link rel="icon" href="images/icon.jpg">
 	<title>Inicio</title>
 	<link rel="stylesheet" href="style/main.css">
-	<!-- <link rel="stylesheet" href="style/style.css"> -->	
+	<link rel="stylesheet" href="style/style.css">	
+	<script src="js/jquery.js"></script>
+	
+	<script>
+			$(document).ready(function(){
+				$("a").on('click', function(event) {
+					if (this.hash != ""){
+						event.preventDefault();
+						var hash = this.hash;
+						$('html, body').animate({
+							scrollTop: $(hash).offset().top
+						}, 800, function(){
+						window.location.hash = hash;
+						});
+					}
+				});
+				//Fin de la funcion del smooth scrolling
+
+
+			});
+	</script>
 </head>
 <body>
-<!-- <script>
-var w = window.innerWidth;
-var h = window.innerHeight;
-
-var intro = document.getElementsByClassName("intro")[0];
-var historia = document.getElementsByClassName("historia")[0];
-var parrafos = document.getElementsByClassName("parrafos")[0];
-var sonido = document.getElementById("sonido");
-
-intro.style.fontSize = w / 30 + "px";
-historia.style.fontSize = w / 20 + "px";
-parrafos.style.height = h + "px";
-
-window.addEventListener("resize", function(){
-	w = canvas.Width = window.innerWidth;
-	h = canvas.Height = window.innerHeight;
-	intro.style.fontSize = w / 30 + "px";
-	historia.style.fontSize = w / 20 + "px";
-	parrafos.style.height = h + "px";
-	inicio();
-	nevada();
-});
-
-function animar(){
-	intro.className = "intro texto_intro animacion_intro";
-	historia.className = "historia texto_historia animacion_historia";
-	sonido.play();	
-}
-
-var canvas = document.getElementById('snow');
-var ctx = canvas.getcontext('2d');
-canvas.width = w;
-canvas.height = h;
-
-var num = 100;
-var size = 2;
-var elementos = [];
-
-inicio();
-nevada();
-
-function inicio(){
-	for (var i = 0; i < num; i++) {
-		elementos[i] = {
-			x: Math.ceil(Math.random() * w),
-			y:  Math.ceil(Math.random() * h),
-			size: Math.random() * size
-		}
-	}
-}
-
-function nevada(){
-	ctx.clearRect(0,0,w,h);
-	for (var i = 0; i < num; i++) {
-		var e = elementos[i];
-		ctx.beginPath();
-		ctx.fillStyle = "#ff6";
-		ctx.arc(e.x, e.y, e.size, 0, 2*Math.PI);
-		ctx.fill();
-	}
-}
-</script> -->
 	<div id="wrapper">
 		<header>
 			<input id="menu" type="checkbox">
 			<label for="menu">MENU<span class="icon-menu"></span></label>
 			<ul>
-				<li><a class="anchor__menu" href="">PERFIL</a></li>
+				<li><a class="anchor__menu" href="#perfil">PERFIL</a></li>
+				<li><a class="anchor__menu" href="">DESARROLLO</a></li>
 				<li><a class="anchor__menu" href="">PROYECTOS</a></li>
 				<li><a class="anchor__menu" href="">CONTACTO</a></li>
 			</ul>
 		</header>
-		<div class="logo">
-			<p>SCMDEVELOPER</p>
+		<div class="logo" id="inicio">
+			<p> SCMDEVELOPER</p>
 		</div>
 
-		<!-- <div class="botón" onclick="animar()">Iniciar</div>
-<canvas id='snow'></canvas>
-<section class="intro texto_intro">
-  No puedo dormir,<br>la la la la la,<br> tengo hambre ...
-</section>
-<section class="párrafos">
-  <div class="historia texto_historia">
-    <p>Espero que funcione porque sino me voy a echar a llorar :( </p>
-    <p>La verdad es que si no funciona, mejor me dedico a otra cosa porque no tengo futuro para esto jejejeps</p>
-    <p>La cosa es que siempre que no puedo dormir me pongo creativo y pos, solo que me gusta StarWars...</p>
-    <p>No se que mas escribir asi que voy a ganar espacio escribiendo algo al azar.</p>
-  </div>
-</section>
-<audio src="https://raw.githubusercontent.com/NestorPlasencia/sound/master/starwars.mp3" id="sonido" ></audio>
-
-
-<script src="js/main.js"> </script> -->
-	<!-- </div> -->
+		<div class="perfil" id="perfil">
+			<img src="" alt="">
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam magni inventore, veritatis. Soluta dicta porro deleniti molestiae, quas nobis error. Sint animi delectus soluta quisquam accusantium iusto cupiditate vel neque? ipsum dolor sit amet, consectetur adipisicing elit. Magnam illum, ex, inventore at, accusamus rerum repellendus officia dolorum molestiae commodi ad aspernatur itaque quaerat porro quos cum? Ex, alias, sint! ipsum dolor sit amet, consectetur adipisicing elit. Eos, facilis tenetur saepe accusamus quo! Nobis error, similique sunt quo perferendis reprehenderit deserunt! Molestias, id quisquam voluptate, eveniet laborum illo dicta!</p>
+		</div>
+		<a class="volver" id="volver" href="#inicio">^</a>
+		<footer>
+			
+		</footer>
+		<script src="js/menu.js"></script>
 </body>
 </html>
