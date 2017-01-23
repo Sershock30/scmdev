@@ -10,3 +10,15 @@ window.addEventListener('scroll', function(){
 		volver.classList.remove('mostrar');
 	}
 });
+
+var bajar = document.getElementById('bajar');
+var altura = ini.offsetTop;
+window.addEventListener('scroll', function(){
+	if (window.pageYOffset > altura) {
+		bajar.classList.add('volver');
+		bajar.classList.remove('bajar');
+	}else{
+		bajar.classList.add('bajar');
+		bajar.classList.remove('volver');
+	}
+});

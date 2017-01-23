@@ -4,6 +4,30 @@
 }
 
 
+/*fonts 
+
+
+font-family: 'Passion One', cursive;
+font-family: 'Voces', cursive;
+font-family: 'Slabo 27px', serif;
+font-family: 'Overpass Mono', monospace;
+font-family: 'Bitter', serif;
+font-family: 'VT323', monospace;
+font-family: 'Roboto Mono', monospace;
+font-family: 'Roboto Slab', serif;
+font-family: 'Share Tech Mono', monospace;
+
+
+*/
+
+
+body{
+	background-attachment:fixed; 
+	background-image:url("../images/negrogradiente1.jpg");
+	background-repeat: no-repeat;
+	background-size:100% 100%;
+}
+
 #wrapper{
 	width:100%; 
 	overflow:hidden; 
@@ -11,13 +35,15 @@
 
 header{
 	position:fixed;
+	z-index:999; 
 	width:100%;
 	/*background-color:#101830; */
 	text-align:center;  
 }
 
 .icon-menu{ 
-	height:70px;  
+	position:relative;
+	height:50px;  
 	font-size:30px; 
 	color:white;
 	display:none; 
@@ -25,7 +51,7 @@ header{
 
 header label{
 	position:relative;
-	top:20px;   
+	padding-top:10px;    
 	font-family:arial;
 	color:white;
 	display: none; 
@@ -60,45 +86,143 @@ header a:hover{
 }
 
 .logo{
-	height:100vh; 
-	background-attachment:fixed; 
-	background-image:url("../images/negrogradiente1.jpg");
-	background-repeat: no-repeat;
-	background-size:100%;  
+	height:120vh;   
 }
 
 .logo p{
-	position:absolute; 
-	top:43%;  
-	margin-left:50%;  
+	position:absolute;
+	z-index:0;  
+	top:43%;
+	padding:0 15px 0 15px;   
+	left:50%;  
 	font-size:45px; 
 	font-weight:700; 
 	line-height:60px; 
-	width:400px;
 	transform:translateX(-50%);  
 	font-family:arial; 
 	color:white;
-	border:12px solid white;   
+	outline:12px solid white;   
+}
+
+.bajar{
+	transition:.5s; 
+	text-align:center;
+	line-height:40px;  
+	position:fixed;
+	width: 30px;;
+	height: 30px;
+	margin-left:50%;
+	bottom: 40px; 
+	font-family: 'Roboto Mono', monospace;
+	font-size:27px;
+	font-weight:900; 
+	padding:10px;
+	color:black; 
+	border-radius:50%; 
+	background-color:rgba(255,255,255, 0.6);
+	text-decoration:none;
+	display:block;
+	
+	transform:translate();
+
+	animation: move 2s infinite;
+}
+
+.bajar p{
+	position: absolute; 
+	left:35%;
+	top:10%; 
+	text-decoration:none; 
+	color:black;
+}
+
+.bajar:hover{
+	background-color:rgba(255,255,255, 1);
+}
+
+@keyframes move{
+	0%{transform: translate(-50%,-15px);}
+	50%{transform: translate(-50%, 0px);}
+	70%{transform: translate(-50%, 0px);}
+	100%{transform:translate(-50%, -15px); }
 }
 
 .perfil{
-	background-color:yellow; 
+	position:relative;
+	z-index:-10; 
+	background-image:url(../images/fondoperfil.jpg); 
 }
 
-.perfil img{
+.perfil .image{
+	position:relative;
+	z-index:-10;  
+	top: 40px;  
 	width: 350px;
-	height: 350px;
+	height: 340px;
 	border-radius:50%; 
-	border:1px solid red;
-	margin-top:50px; 
+	border:1px solid red; 
 	margin-left:50%;
-	transform:translateX(-50%);   
+	transform:translateX(-50%);
+	overflow:hidden;    
+}
+
+.perfil .image img{
+	margin-left:-43%; 
 }
 
 .perfil p{
+	color:white;
+	font-family:arial;
+	letter-spacing:0.7px;
+	line-height:25px;  
 	box-sizing:border-box;
 	padding:50px 70px 50px 70px;
 	text-align:center;     
+}
+
+.planes-desarrollo{
+	box-sizing:border-box;
+	background-color:#BFBFBF; 
+	display: flex;
+	flex-wrap: wrap;
+	justify-content:space-around; 
+	padding:50px; 
+}
+
+.plan{
+	margin-top:15px;
+	background-color:#F3EEEE; 
+	text-align:center; 
+	width: 300px;
+	height: 500px;
+	border-radius:6px; 
+}
+
+.plan h1{
+	padding-top:10px; 
+	font-family: 'Bitter', serif;
+	color:black; 
+}
+
+.plan ul{
+	box-sizing:border-box; 
+	padding:15px; 
+	list-style:none; 
+}
+
+.plan ul li{ 
+	border-bottom:1px solid black; 
+	text-align:left; 
+	color:black;
+	font-family: 'Roboto Slab', monospace;
+	font-weight:0; 
+	line-height:30px; 
+	font-size:20px; 
+}
+
+.plan ul li h2{
+	text-align:center; 
+	border-bottom:2px solid black; 
 }
 
 .volver{
@@ -106,6 +230,7 @@ header a:hover{
 }
 
 .mostrar{
+	transition:.5s; 
 	text-align:center;
 	line-height:40px;  
 	position:fixed;
@@ -116,11 +241,15 @@ header a:hover{
 	font-family:monospace;
 	font-size:40px;
 	padding:10px;
-	color:#F2EBCB; 
+	color:black; 
 	border-radius:50%; 
-	background-color:#3C3131;
+	background-color:rgba(255,255,255, 0.6);
 	text-decoration:none;
 	display:block; 
+}
+
+.mostrar:hover{
+	background-color:rgba(255,255,255, 1); 
 }
 
 /*Seccion del media para responsive*/
@@ -128,10 +257,13 @@ header a:hover{
 
 	.icon-menu{
 		display:block;
+		margin-top:0px;  
+		/*background-color:rgba(0,0,0, 0.5);*/ 
 		cursor:pointer;  
 	}
 
 	header label{
+		background-color:rgba(0,0,0, 0.5); 
 		display: block;
 	}
 
@@ -145,7 +277,7 @@ header a:hover{
 
 	header a:hover{
 		color:white;
-		outline: 3px solid white;
+		outline: 1px solid white;
 	}
 
 	header ul{
@@ -174,8 +306,7 @@ header a:hover{
 	}
 
 	.logo p{
-		font-size:25px; 
-		width:80%; 
+		font-size:50px;  
 	}
 
 }
