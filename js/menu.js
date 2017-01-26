@@ -25,9 +25,9 @@ window.addEventListener('scroll', function(){
 
 $(document).scroll(function(){
 	if ($(document).scrollTop()>800) {
-		$('#cont1').fadeIn(3000);
-		$('#cont2').fadeIn(3000);
-		$('#cont3').fadeIn(3000);
+		$('#cont1').fadeIn(2500);
+		$('#cont2').fadeIn(2500);
+		$('#cont3').fadeIn(2500);
 	}else{
 
 	}
