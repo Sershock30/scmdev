@@ -149,7 +149,8 @@ header a:hover{
 
 .perfil{
 	position:relative;
-	z-index:-10; 
+	z-index:-10;
+	height: 100vh; 
 	background-image:url(../images/fondoperfil.jpg); 
 }
 
@@ -160,17 +161,18 @@ header a:hover{
 	width: 350px;
 	height: 340px;
 	border-radius:50%; 
-	border:1px solid red; 
+	/*border:1px solid red;*/ 
 	margin-left:50%;
 	transform:translateX(-50%);
 	overflow:hidden;    
 }
 
-.perfil .image img{
-	margin-left:-43%; 
+.perfil .image img{ 
+	margin-top:-70px; 
 }
 
 .perfil p{
+	margin-top:30px; 
 	color:white;
 	font-family:arial;
 	letter-spacing:0.7px;
@@ -183,16 +185,18 @@ header a:hover{
 .planes-desarrollo{
 	box-sizing:border-box;
 	display: flex;
+	height: 100vh;
 	flex-wrap: wrap;
 	justify-content:space-around; 
 	padding:50px;
 }
 
 .contenedor{
+	display: none;
 	margin-top:20px; 
-	height: 400px;
-	width: 300px;
-
+	height: 370px;
+	width: 400px;
+	border-radius:6px; 
 	-webkit-perspective:700;
 }
 
@@ -217,14 +221,52 @@ header a:hover{
 	position: absolute;
 }
 
+.lado img{
+	border-radius:5px; 
+	width: 100%;
+	height: 100%;
+}
+
 .frente{
 	background-color:crimson;
 
 }
 
 .atras{
-	background-color: green;
+	border-radius:6px;  
+	background-color: #D6D6D6;
 	transform: rotateY(180deg);
+	position:relative; 
+}
+
+.atras ul{
+	height: 100%;
+	width: 100%;
+	list-style:none; 
+}
+
+.atras ul li{
+	box-sizing:border-box;
+	font-size:25px;
+	padding:20px;  
+	width: 100%;
+	height: 25%;
+}
+
+.atras ul li:nth-child(2){
+	background-color:#B3B3B3; 
+}
+
+.atras ul li:last-child{
+	background-color:#B3B3B3; 
+	font-weight:900;  
+	text-align:center;  
+}
+
+.atras a{
+	position:absolute;
+	right: 10px;
+	bottom: 0; 
 }
 
 .volver{

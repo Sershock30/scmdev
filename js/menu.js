@@ -22,3 +22,13 @@ window.addEventListener('scroll', function(){
 		bajar.classList.remove('volver');
 	}
 });
+
+$(document).scroll(function(){
+	if ($(document).scrollTop()>800) {
+		$('#cont1').fadeIn(3000);
+		$('#cont2').fadeIn(3000);
+		$('#cont3').fadeIn(3000);
+	}else{
+
+	}
+});
