@@ -194,48 +194,52 @@ header a:hover{
 
 .planes-desarrollo{
 	box-sizing:border-box;
+	background-color:#BFBFBF; 
 	display: flex;
 	flex-wrap: wrap;
 	justify-content:space-around; 
-	padding:50px;
-	height: 1000px; 
+	padding:50px; 
 }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 .contenedor{
 	margin-top:20px; 
 	height: 400px;
+=======
+.plan{
+	margin-top:15px;
+	background-color:#F3EEEE; 
+	text-align:center; 
+>>>>>>> parent of d6a40bf... UpdateRotation1
 	width: 300px;
-
-	-webkit-perspective:700;
+	height: 500px;
+	border-radius:6px; 
 }
 
-.carta{
-	height: 100%;
-	width: 100%;
-	
-	position: relative;
-	transform-style: preserve-3d;
-	transition:1s;
+.plan h1{
+	padding-top:10px; 
+	font-family: 'Bitter', serif;
+	color:black; 
 }
 
-.carta:hover{
-	transform: rotateY(180deg);
+.plan ul{
+	box-sizing:border-box; 
+	padding:15px; 
+	list-style:none; 
 }
 
-.lado{
-	width: 100%;
-	height: 100%;
-	backface-visibility: hidden;
-	
-	position: absolute;
+.plan ul li{ 
+	border-bottom:1px solid black; 
+	text-align:left; 
+	color:black;
+	font-family: 'Roboto Slab', monospace;
+	font-weight:0; 
+	line-height:30px; 
+	font-size:20px; 
 }
 
-.frente{
-	background-color:crimson;
-
-}
-
+<<<<<<< HEAD
 .atras{
 	background-color: green;
 	transform: rotateY(180deg);
@@ -287,6 +291,11 @@ header a:hover{
 .plan:hover > .frente{
 	display: none;
 >>>>>>> origin/master
+=======
+.plan ul li h2{
+	text-align:center; 
+	border-bottom:2px solid black; 
+>>>>>>> parent of d6a40bf... UpdateRotation1
 }
 
 .volver{
