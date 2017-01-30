@@ -149,7 +149,8 @@ header a:hover{
 
 .perfil{
 	position:relative;
-	z-index:-10; 
+	z-index:-10;
+	height: 100vh; 
 	background-image:url(../images/fondoperfil.jpg); 
 }
 
@@ -182,9 +183,9 @@ header a:hover{
 }
 
 .planes-desarrollo{
-	position:relative; 
 	box-sizing:border-box;
 	display: flex;
+	height: 100vh;
 	flex-wrap: wrap;
 	justify-content:space-around; 
 	padding:50px;
@@ -278,18 +279,6 @@ header a:hover{
 
 .atras a:hover{
 	background-color:rgba(0,0,0, 0.6); 
-}
-
-.planpersonalizado{
-	text-decoration: none;
-	color:white;
-	margin-top:30px; 
-	width: 100%;
-	text-align: center;
-	background-color:#693030;
-	line-height:60px;
-	font-size:30px;  
-	border-radius:6px; 
 }
 
 .volver{
