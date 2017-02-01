@@ -390,6 +390,7 @@ font-family: 'Titillium Web', sans-serif;*/
 	margin-left:50%;
 	transform:translateX(-50%);   
 	width:100%; 
+	color:white;
 }
 
 ::-webkit-input-placeholder { /* WebKit, Blink, Edge */
