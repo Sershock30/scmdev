@@ -359,8 +359,9 @@ font-family: 'Titillium Web', sans-serif;*/
 
 #contacto{
 	position:relative;
-	box-sizing:border-box;   
-	height:1100px;
+	box-sizing:border-box;
+	min-height:100vh;   
+	/*height:1100px;*/
 	background-image:url('../images/bgcontacto.jpg'); 
 	background-repeat: no-repeat;
 	background-size:100% 100%; 
