@@ -423,7 +423,7 @@ font-family: 'Titillium Web', sans-serif;*/
 #contacto .boton{
 	background-color:rgba(63, 108, 60, 0.6);
 	border:none;
-	widows: 5px;0%;	
+	width: 50%;	
 	height:40px;
 	margin-left:50%;
 	transform:translateX(-50%);
