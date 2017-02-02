@@ -358,11 +358,29 @@ font-family: 'Titillium Web', sans-serif;*/
 }
 
 #contacto{
+<<<<<<< HEAD
 	position:relative; 
 	height: 100vh;
 	background-image:url('../images/bgcontacto.jpg');
 	background-repeat: no-repeat;
 	background-size:100%; 
+=======
+	position:relative;
+	box-sizing:border-box;
+	min-height:100vh;   
+	/*height:1100px;*/
+	background-attachment:fixed; 
+	background-image:url('../images/bgcontacto.jpg'); 
+	background-repeat: no-repeat;
+	background-size:100% 100%; 
+}
+
+#contacto iframe{
+	margin-top:20px; 
+	position:absolute;
+	left:50%;
+	transform:translateX(-50%);  
+>>>>>>> origin/master
 }
 
 #contacto form{	
@@ -391,8 +409,13 @@ font-family: 'Titillium Web', sans-serif;*/
 	padding:7px;
 	margin-left:50%;
 	transform:translateX(-50%);   
+<<<<<<< HEAD
 	width:100%;
 	color:white; 
+=======
+	width:100%; 
+	color:white;
+>>>>>>> origin/master
 }
 
 ::-webkit-input-placeholder { /* WebKit, Blink, Edge */
