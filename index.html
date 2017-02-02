@@ -101,6 +101,7 @@
 					</div>
 				</div>
 			</div>
+
 		</div>
 		<div id="proyectos">
 			<div class="proyecto">
@@ -120,11 +121,11 @@
 			</div>
 		</div>
 		<div id="contacto">
-			<form action="">
+			<form action="php/send_email.php" method="post">
 				<h1>Contacto</h1>
 				<input class="input" type="text" name="Nombre" required="true" placeholder="Nombre">
 				<input class="input" type="email" name="Correo" required="true" placeholder="Correo electronico">
-				<textarea class="input" placeholder="Mensaje"></textarea>
+				<textarea class="input" placeholder="Mensaje" name="Mensaje"></textarea>
 				<input class="boton" type="submit">
 			</form>
 		</div>
